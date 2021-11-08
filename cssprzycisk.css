@@ -1,3 +1,4 @@
+
 body{                                                                                       /*CSS wymaga content nawet pustego, inaczej ten element by się nie wyświetlił*/
                                                                                             /*before to pseudoelement, który tworzy element nie ingerując w kod html*/
     text-align: center;
