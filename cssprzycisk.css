@@ -1,0 +1,131 @@
+
+body{                                                                                       /*CSS wymaga content nawet pustego, inaczej ten element by się nie wyświetlił*/
+                                                                                            /*before to pseudoelement, który tworzy element nie ingerując w kod html*/
+    text-align: center;
+}
+a{
+text-decoration: none;
+margin:auto auto;}
+.pierwszy{
+    width: 15vw;
+    height: 2.7vw;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #FF013C;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.7vw;
+    letter-spacing: 3px;
+    transition-duration: 0.2s;
+    border-radius: 0vw 2vw 0vw 2vw;
+    margin: auto auto;
+	
+}
+.pierwszy:hover{
+    transition-duration: 0.2s;
+    width: 20vw;
+    border-radius: 2vw 0vw 2vw 0vw;
+    box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+.drugi{
+    width: 15vw;
+    height: 2.7vw;
+    outline: none;
+    cursor: pointer;
+    color: black;
+    background-color: inherit;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.7vw;
+    letter-spacing: 3px;
+    transition-duration: 0.5s;
+    border: none;
+    border-radius: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.1);
+    margin: auto auto;
+	
+}
+
+.drugi:hover{
+    transition-duration: 0.5s;
+    color: white;
+ 
+}
+
+.drugi:before{
+    width: inherit;
+    height: inherit;
+    background-color: #f95800;
+    content: '';
+    position: absolute;
+    border-radius: 3vw;
+    transform: scale(0);
+    transition-duration: 0.3s;
+    z-index: -1;
+    box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.3);
+    opacity: 0;
+ 
+	
+}
+.drugi:hover::before{
+    transform: scale(1);
+    transition-duration: 0.3s;
+    opacity: 1;
+
+}
+
+
+.trzeci{
+    width: 10vw;                                                                                                                                                                                                                                                        /*tekst i wielkość*/
+    height: 10vw;
+    border: none;
+    cursor: pointer;
+    background-color: inherit;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.7vw;
+    letter-spacing: 3px;
+    transition-duration: 0.2s;
+    margin: auto auto;
+    display: flex;
+    justify-content: center;                                                                                                                                                                                                              /* pionowo i poziomo centruje wszystko wewnątrz elementu BEFORE JEST W BUTTON*/
+    align-items: center;
+}
+.trzeci:hover{
+    transition-duration: 0.2s;                                                                                                                                                                                                                                             /*tekst kolor*/
+    color: black;
+}
+
+.trzeci:before{
+    width: inherit;
+    height: inherit;
+    transform: rotate(45deg);
+    background-color: #00a86b;
+    position: absolute;
+    content: '';
+    z-index: -1;
+    box-shadow: 4px 4px 10px 3px rgba(0,0,0,0.3);
+    border: 3px solid #00a86b;
+    transition-duration: 0.6s;
+}
+.trzeci:hover:before{
+    background-color: inherit;
+    transition-duration: 0.6s;
+    transform: rotate(315deg);
+}
+
+
+
+
+.container{
+    position: relative;
+    display: flex;
+}
